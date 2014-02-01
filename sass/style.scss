@@ -1,0 +1,54 @@
+@import "normalize";
+@import "compass";
+@import "typography";
+@import "grid";
+
+// This sites styles
+
+// Page setup: This is for preview purposes and can be deleted
+$example-color: #F3F2EF;
+.example {
+  background: $example-color;
+  padding: $column-gutter 0 0 0;
+  .row .column, .row .columns { margin-bottom: $column-gutter; }
+  .columns, .column {  }
+  .row .column, .row .columns { 
+  	background: darken($example-color, 5%);
+  	.row .column, .row .columns {background: darken($example-color, 10%);}
+
+  }
+  p { padding: 10px; font-size: 1em; font-weight: 300; line-height: 1.3; margin: 0;}
+  h1,h2,h3,h4,h5 { padding: 10px; margin: 0; }
+}
+
+// End of page setup
+
+$header: #34495E;
+
+header {
+	background: $header;
+	color: white;
+	display: flex;
+	.row .columns {
+		flex-direction: column;
+		align-content: center;
+		padding: $column-gutter 0;
+		h1 {
+			font-size: 5em;
+			margin: 0;
+		}
+		.links { display: flex;}
+		a {
+			display: block;
+			background: white;
+			text-decoration: none;
+			color: #34495E;
+			padding: 10px 20px;
+			text-align: center;
+			font-size: 21px;
+			&:hover {
+				background: #E8E6E0;
+			}
+		}
+	}
+}
